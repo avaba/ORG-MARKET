@@ -1,0 +1,71 @@
+$pfx: "auth-form";
+
+.#{$pfx} {
+    margin-bottom: 50px;
+
+    // filter: drop-shadow(0px 4px 10px rgba(221, 222, 222, 0.5));
+    .#{$pfx}-tabs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: $white;
+            z-index: 2;
+        }
+
+        &--tab {
+            background: $white;
+            border: 0;
+            border-radius: 4px 4px 0 0;
+            height: 57px;
+            line-height: 57px;
+            text-align: center;
+            filter: drop-shadow(0px 4px 10px rgba(221, 222, 222, 0.5));
+            cursor: pointer;
+            border: 1px solid #E8E8E8;
+            border-bottom: 0;
+            background: $gray-100;
+            color: #B1B1B1;
+            font-size: 12px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &--active {
+            color: $accent;
+            background: $white;
+            border-color: $white;
+        }
+    }
+
+    .#{$pfx}-layout {
+        background: $white;
+        filter: drop-shadow(0px 4px 10px rgba(221, 222, 222, 0.5));
+        overflow: hidden;
+        padding: 60px;
+        border-radius: 0 0 4px 4px;
+
+        &__field-group {
+            margin-bottom: 20px;
+        }
+    }
+
+    @media screen and (max-width: $break_lg) {
+        .#{$pfx}-layout {
+            padding: 30px 25px;
+        }
+    }
+}

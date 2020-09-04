@@ -1,0 +1,12 @@
+$pfx: "header";
+
+.#{$pfx} {
+    padding: 32px 50px;
+    position: relative;
+    z-index: 999;
+
+    @media screen and (max-width: $break_sm){
+        padding: 20px 15px;
+        text-align: center;
+    }
+}

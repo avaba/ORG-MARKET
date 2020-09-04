@@ -1,0 +1,9 @@
+mixin benefits(data)
+    .benefits
+        each item in data.items
+            .benefits-item
+                .benefits-item__img
+                    +svg(item.icon)
+                .benefits-item__body
+                    h3.benefits-item__body-title!= item.title
+                    p.benefits-item__body-desc!= item.desc

@@ -1,0 +1,48 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/modules/header/header
+include ../blocks/modules/head/head
+include ../blocks/components/benefits/benefits
+include ../blocks/components/auth-form/auth-form
+
+block head
+	+head({
+		title: 'ORG-MARKET — товарно-сырьевой маркетплейс'
+	})
+
+block header
+	+header()
+
+block content
+	.app-layout
+		.container
+			.app-layout__wrap
+				.app-layout__wrap-col
+					h1.app-layout__title Оптовые закупки#[br] качественных нефтепродуктов#[nobr по лучшим ценам]
+					+benefits({
+						items: [
+							{
+								icon: 'chart',
+								title: 'Удобное отслеживание динамики цен',
+								desc: 'Краткое описание преимущества в пару строк'
+							},
+							{
+								icon: 'tablet',
+								title: 'Быстрое оформление',
+								desc: 'Краткое описание преимущества в пару строк'
+							},
+							{
+								icon: 'product',
+								title: 'Широкий выбор',
+								desc: 'Краткое описание преимущества в пару строк'
+							},
+						]
+					})
+
+				.app-layout__wrap-col
+					+auth-form()
+
+
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

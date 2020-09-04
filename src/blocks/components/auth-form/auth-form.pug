@@ -1,0 +1,19 @@
+mixin auth-form(data)
+    .auth-form
+        .auth-form-tabs
+            button.auth-form-tabs--tab.auth-form-tabs--active Вход
+            button.auth-form-tabs--tab Регистрация
+        .auth-form-layout
+            form
+                .auth-form-layout__field-group
+                    label.input-group
+                        .input-group__head
+                            span.input-group__head--title Телефон
+                            span.input-group__head--tooltip ?
+                        input(type="tel", placeholder="+7 (900) 000-00-00", required).input-group__input
+                .auth-form-layout__field-group    
+                    label.checkbox
+                        input(type="checkbox").checkbox__input
+                        span.checkbox__text Запомнить меня
+                button.btn 
+                    span Войти
